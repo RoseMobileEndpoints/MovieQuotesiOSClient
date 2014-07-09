@@ -11,14 +11,7 @@
 #import "GTLMoviequotes.h"
 
 
-@interface RHDetailViewController ()
-- (void)configureView;
-@end
-
 @implementation RHDetailViewController
-
-
-#pragma mark - Managing the detail item
 
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
