@@ -8,7 +8,8 @@
 
 #import "RHDetailViewController.h"
 
-#import "RHTemporaryMovieQuoteModelObject.h"
+#import "GTLMoviequotes.h"
+
 
 @interface RHDetailViewController ()
 - (void)configureView;
@@ -18,7 +19,7 @@
 
 #pragma mark - Managing the detail item
 
-- (void)setQuote:(RHTemporaryMovieQuoteModelObject*) quote {
+- (void)setQuote:(GTLMoviequotesMovieQuote*) quote {
     if (_quote != quote) {
         _quote = quote;
         

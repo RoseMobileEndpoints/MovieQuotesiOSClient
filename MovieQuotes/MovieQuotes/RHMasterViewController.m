@@ -9,7 +9,7 @@
 #import "RHMasterViewController.h"
 
 #import "RHDetailViewController.h"
-#import "RHTemporaryMovieQuoteModelObject.h"
+#import "GTLMoviequotes.h"
 
 #define kMovieQuoteCellIdentifier         @"MovieQuoteCell"
 #define kLoadingMovieQuotesCellIdentifier @"LoadingMovieQuotesCell"
@@ -68,19 +68,19 @@
         _quotes = [[NSMutableArray alloc] init];
 
         // Add some code for initial testing.
-//        RHTemporaryMovieQuoteModelObject* mq1 = [[RHTemporaryMovieQuoteModelObject alloc] init];
+//        GTLMoviequotesMovieQuote* mq1 = [[GTLMoviequotesMovieQuote alloc] init];
 //        mq1.quote = @"Local quote 1";
 //        mq1.movie = @"Local movie 1";
 //        [_quotes addObject:mq1];
 //
 //
-//        RHTemporaryMovieQuoteModelObject* mq2 = [[RHTemporaryMovieQuoteModelObject alloc] init];
+//        GTLMoviequotesMovieQuote* mq2 = [[GTLMoviequotesMovieQuote alloc] init];
 //        mq2.quote = @"Local quote 2";
 //        mq2.movie = @"Local movie 2";
 //        [_quotes addObject:mq2];
 //
 //
-//        RHTemporaryMovieQuoteModelObject* mq3 = [[RHTemporaryMovieQuoteModelObject alloc] init];
+//        GTLMoviequotesMovieQuote* mq3 = [[GTLMoviequotesMovieQuote alloc] init];
 //        mq3.quote = @"Local quote 3";
 //        mq3.movie = @"Local movie 3";
 //        [_quotes addObject:mq3];
@@ -110,7 +110,7 @@
     } else {
         cell = [tableView dequeueReusableCellWithIdentifier:kMovieQuoteCellIdentifier forIndexPath:indexPath];
         cell.accessoryView = nil;
-        RHTemporaryMovieQuoteModelObject* currentQuote = self.quotes[indexPath.row];
+        GTLMoviequotesMovieQuote* currentQuote = self.quotes[indexPath.row];
         cell.textLabel.text = currentQuote.quote;
         cell.detailTextLabel.text = currentQuote.movie;
     }
@@ -143,7 +143,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:kPushDetailQuoteSegue]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        RHTemporaryMovieQuoteModelObject *movieQuote = self.quotes[indexPath.row];
+        GTLMoviequotesMovieQuote *movieQuote = self.quotes[indexPath.row];
         [[segue destinationViewController] setQuote:movieQuote];
     }
 }
@@ -162,7 +162,7 @@
     NSString* quote = [[alertView textFieldAtIndex:kQuoteTextFieldIndex] text];
 
 
-    RHTemporaryMovieQuoteModelObject* newQuote = [[RHTemporaryMovieQuoteModelObject alloc] init];
+    GTLMoviequotesMovieQuote* newQuote = [[GTLMoviequotesMovieQuote alloc] init];
     newQuote.movie = movieTitle;
     newQuote.quote = quote;
 

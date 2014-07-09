@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-@class RHTemporaryMovieQuoteModelObject;
+@class GTLMoviequotesMovieQuote;
 
 @interface RHDetailViewController : UIViewController
 
-@property (strong, nonatomic) RHTemporaryMovieQuoteModelObject* quote;
+@property (strong, nonatomic) GTLMoviequotesMovieQuote* quote;
 @property (weak, nonatomic) IBOutlet UILabel* quoteLabel;
 @property (weak, nonatomic) IBOutlet UILabel* movieTitleLabel;
 
