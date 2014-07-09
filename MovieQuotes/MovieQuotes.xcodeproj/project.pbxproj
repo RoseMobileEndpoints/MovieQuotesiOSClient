@@ -22,8 +22,6 @@
 		FD2D9AE2196CEE2900E59F80 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD2D9AC1196CEE2900E59F80 /* UIKit.framework */; };
 		FD2D9AEA196CEE2900E59F80 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FD2D9AE8196CEE2900E59F80 /* InfoPlist.strings */; };
 		FD2D9AEC196CEE2900E59F80 /* MovieQuotesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2D9AEB196CEE2900E59F80 /* MovieQuotesTests.m */; };
-		FD2D9AFA196CFF5B00E59F80 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD2D9AF9196CFF5B00E59F80 /* Security.framework */; };
-		FD2D9AFC196CFF6800E59F80 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD2D9AFB196CFF6800E59F80 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,8 +65,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD2D9AFC196CFF6800E59F80 /* SystemConfiguration.framework in Frameworks */,
-				FD2D9AFA196CFF5B00E59F80 /* Security.framework in Frameworks */,
 				FD2D9AC0196CEE2900E59F80 /* CoreGraphics.framework in Frameworks */,
 				FD2D9AC2196CEE2900E59F80 /* UIKit.framework in Frameworks */,
 				FD2D9ABE196CEE2900E59F80 /* Foundation.framework in Frameworks */,
