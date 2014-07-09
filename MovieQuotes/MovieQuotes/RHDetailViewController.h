@@ -7,10 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+@class RHTemporaryMovieQuoteModelObject;
 
 @interface RHDetailViewController : UIViewController
 
-@property (strong, nonatomic) id detailItem;
+@property (strong, nonatomic) RHTemporaryMovieQuoteModelObject* quote;
+@property (weak, nonatomic) IBOutlet UILabel* quoteLabel;
+@property (weak, nonatomic) IBOutlet UILabel* movieTitleLabel;
 
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+- (IBAction) pressedEditButton:(id)sender;
+
+
 @end

@@ -22,6 +22,7 @@
 		FD2D9AE2196CEE2900E59F80 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD2D9AC1196CEE2900E59F80 /* UIKit.framework */; };
 		FD2D9AEA196CEE2900E59F80 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FD2D9AE8196CEE2900E59F80 /* InfoPlist.strings */; };
 		FD2D9AEC196CEE2900E59F80 /* MovieQuotesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2D9AEB196CEE2900E59F80 /* MovieQuotesTests.m */; };
+		FD2D9AF7196CF54F00E59F80 /* RHTemporaryMovieQuoteModelObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2D9AF6196CF54F00E59F80 /* RHTemporaryMovieQuoteModelObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		FD2D9AE7196CEE2900E59F80 /* MovieQuotesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MovieQuotesTests-Info.plist"; sourceTree = "<group>"; };
 		FD2D9AE9196CEE2900E59F80 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FD2D9AEB196CEE2900E59F80 /* MovieQuotesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieQuotesTests.m; sourceTree = "<group>"; };
+		FD2D9AF5196CF54F00E59F80 /* RHTemporaryMovieQuoteModelObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHTemporaryMovieQuoteModelObject.h; sourceTree = "<group>"; };
+		FD2D9AF6196CF54F00E59F80 /* RHTemporaryMovieQuoteModelObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHTemporaryMovieQuoteModelObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,12 +121,11 @@
 				FD2D9ACC196CEE2900E59F80 /* RHAppDelegate.h */,
 				FD2D9ACD196CEE2900E59F80 /* RHAppDelegate.m */,
 				FD2D9ACF196CEE2900E59F80 /* Main.storyboard */,
-				FD2D9AD2196CEE2900E59F80 /* RHMasterViewController.h */,
-				FD2D9AD3196CEE2900E59F80 /* RHMasterViewController.m */,
-				FD2D9AD5196CEE2900E59F80 /* RHDetailViewController.h */,
-				FD2D9AD6196CEE2900E59F80 /* RHDetailViewController.m */,
+				FD2D9AF8196CFA1B00E59F80 /* View Controllers */,
 				FD2D9AD8196CEE2900E59F80 /* Images.xcassets */,
 				FD2D9AC4196CEE2900E59F80 /* Supporting Files */,
+				FD2D9AF5196CF54F00E59F80 /* RHTemporaryMovieQuoteModelObject.h */,
+				FD2D9AF6196CF54F00E59F80 /* RHTemporaryMovieQuoteModelObject.m */,
 			);
 			path = MovieQuotes;
 			sourceTree = "<group>";
@@ -155,6 +157,17 @@
 				FD2D9AE8196CEE2900E59F80 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FD2D9AF8196CFA1B00E59F80 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FD2D9AD2196CEE2900E59F80 /* RHMasterViewController.h */,
+				FD2D9AD3196CEE2900E59F80 /* RHMasterViewController.m */,
+				FD2D9AD5196CEE2900E59F80 /* RHDetailViewController.h */,
+				FD2D9AD6196CEE2900E59F80 /* RHDetailViewController.m */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +271,7 @@
 				FD2D9ACE196CEE2900E59F80 /* RHAppDelegate.m in Sources */,
 				FD2D9AD4196CEE2900E59F80 /* RHMasterViewController.m in Sources */,
 				FD2D9ACA196CEE2900E59F80 /* main.m in Sources */,
+				FD2D9AF7196CF54F00E59F80 /* RHTemporaryMovieQuoteModelObject.m in Sources */,
 				FD2D9AD7196CEE2900E59F80 /* RHDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

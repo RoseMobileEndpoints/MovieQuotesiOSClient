@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RHMasterViewController : UITableViewController
+@interface RHMasterViewController : UITableViewController <UIAlertViewDelegate>
 
 @end
