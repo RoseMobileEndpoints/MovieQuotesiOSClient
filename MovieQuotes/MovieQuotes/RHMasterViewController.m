@@ -16,9 +16,13 @@
 #define kNoMovieQuotesCellIdentifier      @"NoMovieQuotesCell"
 #define kPushDetailQuoteSegue             @"PushDetailQuoteSegue"
 
+#define kLocalhostTesting                 NO
+#define kLocalhostRpcUrl                  @"http://localhost:8080/_ah/api/rpc?prettyPrint=false"
+
 @interface RHMasterViewController ()
 @property (nonatomic) BOOL initialQueryComplete;
 @property (strong, nonatomic) NSMutableArray* quotes;
+@property (nonatomic, strong) GTLServiceMoviequotes* service;
 @end
 
 @implementation RHMasterViewController
@@ -32,17 +36,19 @@
                                                                                target:self
                                                                                action:@selector(showNewQuoteAlertView:)];
     self.navigationItem.rightBarButtonItem = addButton;
+
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    [refreshControl addTarget:self
+                       action:@selector(_queryForQuotes)
+             forControlEvents:UIControlEventValueChanged];
+    self.refreshControl = refreshControl;
 }
 
 
 - (void) viewWillAppear:(BOOL) animated {
     [super viewWillAppear:animated];
-    // TODO: Query the backend for the latest movie quotes.
-    self.initialQueryComplete = YES; // TODO: Delete this line.
-    //self.initialQueryComplete = NO;
-
-    //[self _queryForQuotes];
-    [self.tableView reloadData];
+    self.initialQueryComplete = NO;
+    [self _queryForQuotes];
 }
 
 
@@ -129,6 +135,9 @@
 
         // TODO: Send a message to the backend to remove this quote.
 
+        GTLMoviequotesMovieQuote* quoteToDelete = self.quotes[indexPath.row];
+        [self _deleteQuote:quoteToDelete.entityKey];
+
         [self.quotes removeObjectAtIndex:indexPath.row];
         if (self.quotes.count == 0) {
             [tableView reloadData];
@@ -144,7 +153,10 @@
     if ([[segue identifier] isEqualToString:kPushDetailQuoteSegue]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         GTLMoviequotesMovieQuote *movieQuote = self.quotes[indexPath.row];
-        [[segue destinationViewController] setMovieQuote:movieQuote];
+        RHDetailViewController* detailViewController = segue.destinationViewController;
+        detailViewController.movieQuote = movieQuote;
+        detailViewController.service = self.service;
+        detailViewController.isLocalHostTesting = kLocalhostTesting;
     }
 }
 
@@ -173,8 +185,115 @@
     } else {
         NSIndexPath* newIndexPath = [NSIndexPath indexPathForRow:0 inSection:0];
         [self.tableView insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-        // Warning: This animation can cause an issue with localhost testing. If that happens just use reloadData always.
+        // Warning: This animation can cause an issue with localhost inserts (localhost is too fast :) ).
     }
+    [self _insertQuote:newQuote];
 }
+
+#pragma mark - Endpoints additions
+
+- (GTLServiceMoviequotes*) service {
+    if (_service == nil) {
+        _service = [[GTLServiceMoviequotes alloc] init];
+        if (kLocalhostTesting) {
+            _service.rpcURL = [NSURL URLWithString:kLocalhostRpcUrl];
+        }
+        _service.retryEnabled = YES;
+    }
+    return _service;
+}
+
+
+- (void) _queryForQuotes {
+    GTLQueryMoviequotes* query = [GTLQueryMoviequotes queryForMoviequoteList];
+    query.limit = 30;
+    query.order = @"-last_touch_date_time";
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+    [self.service executeQuery:query completionHandler:^(GTLServiceTicket* ticket,
+                                                         GTLMoviequotesMovieQuoteCollection* movieQuotes,
+                                                         NSError* error) {
+        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+        self.initialQueryComplete = YES;
+        if (error != nil){
+            [self _showErrorDialog:error];
+        } else {
+            self.quotes = [movieQuotes.items mutableCopy];
+
+            // Informational log message that we won't deal with in this example.
+            if (movieQuotes.nextPageToken != nil) {
+                NSLog(@"Note, there are more quotes on the server.  You could call query again to get more using the page token %@", movieQuotes.nextPageToken);
+            }
+        }
+        [self.tableView reloadData];
+        [self.refreshControl endRefreshing];
+    }];
+}
+
+
+- (void) _insertQuote:(GTLMoviequotesMovieQuote*) newQuote {
+    GTLQueryMoviequotes* query = [GTLQueryMoviequotes queryForMoviequoteInsertWithObject:newQuote];
+    if (kLocalhostTesting) {
+        // Hack to work around a localhost bug when doing a POST.
+        query.JSON = newQuote.JSON;
+        query.bodyObject = nil;
+    }
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+    [self.service executeQuery:query completionHandler:^(GTLServiceTicket* ticket,
+                                                    GTLMoviequotesMovieQuote* returnedMovieQuote,
+                                                    NSError* error) {
+        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+        if (error != nil) {
+            [self _showErrorDialog:error];
+            return;
+        } else {
+            // Update this newQuote with the entityKey of the returnedQuote
+            newQuote.entityKey = returnedMovieQuote.entityKey;
+        }
+
+        // Totally optional.  Look for other new quotes now.
+        if (kLocalhostTesting) {
+            // Add a delay to allow the UITableViewRowAnimation to complete before a new query.
+            [self performSelector:@selector(_queryForQuotes) withObject:nil afterDelay:1.0];
+        } else {
+            [self _queryForQuotes];  // Plenty of delay already if using a real backend. :)
+        }
+    }];
+}
+
+
+- (void) _deleteQuote:(NSString*) entityKeyToDelete {
+    GTLQueryMoviequotes* query = [GTLQueryMoviequotes queryForMoviequoteDeleteWithEntityKey:entityKeyToDelete];
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+    [self.service executeQuery:query completionHandler:^(GTLServiceTicket* ticket,
+                                                    GTLMoviequotesMovieQuote* returnedMovieQuote,
+                                                    NSError* error) {
+        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+        if (error != nil) {
+            [self _showErrorDialog:error];
+            return;
+        }
+
+        // Delete worked.  Good for us.  Already done with delete on client.
+
+        // Totally optional.  Look for other new quotes now.
+        if (kLocalhostTesting) {
+            // Add a delay to allow the UITableViewRowAnimation to complete before a new query.
+            [self performSelector:@selector(_queryForQuotes) withObject:nil afterDelay:1.0];
+        } else {
+            [self _queryForQuotes];  // Plenty of delay already if using a real backend. :)
+        }
+    }];
+}
+
+
+- (void) _showErrorDialog:(NSError*) error {
+    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Error performing query."
+                                                    message:error.localizedDescription
+                                                   delegate:nil
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
+}
+
 
 @end

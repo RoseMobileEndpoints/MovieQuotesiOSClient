@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 @class GTLMoviequotesMovieQuote;
+@class GTLServiceMoviequotes;
 
 #define kQuoteTextFieldIndex              0
 #define kMovieTitleTextFieldIndex         1
@@ -20,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UILabel* movieTitleLabel;
 
 - (IBAction) pressedEditButton:(id)sender;
-
+@property (strong, nonatomic) GTLServiceMoviequotes* service;
+@property (nonatomic) BOOL isLocalHostTesting;
 
 @end
