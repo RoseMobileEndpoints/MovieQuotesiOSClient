@@ -57,10 +57,37 @@
     self.movieQuote.movie = movieTitle;
     self.movieQuote.quote = quote;
     [self _updateView];
-
-    // TODO: Update the MovieQuote with Endpoints
+    [self _updateMovieQuote];
 }
 
+#pragma mark - Endpoints methods
+
+
+- (void) _updateMovieQuote {
+    GTLQueryMoviequotes* query = [GTLQueryMoviequotes queryForMoviequoteInsertWithObject:self.movieQuote];
+
+    // Hack to work around a localhost bug when doing a POST.
+    if (self.isLocalHostTesting) {
+        query.JSON = self.movieQuote.JSON;
+        query.bodyObject = nil;
+    }
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+    [self.service executeQuery:query completionHandler:^(GTLServiceTicket* ticket,
+                                                         GTLMoviequotesMovieQuote* returnedMovieQuote,
+                                                         NSError* error) {
+        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+        if (error != nil) {
+            // Ooops!  There is a problem!
+            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Error while doing an update."
+                                                            message:error.localizedDescription
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+            [alert show];
+            return;
+        }
+    }];
+}
 
 
 @end
