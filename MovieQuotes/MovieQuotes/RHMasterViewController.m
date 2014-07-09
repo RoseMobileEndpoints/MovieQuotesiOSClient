@@ -144,7 +144,8 @@
     if ([[segue identifier] isEqualToString:kPushDetailQuoteSegue]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         GTLMoviequotesMovieQuote *movieQuote = self.quotes[indexPath.row];
-        [[segue destinationViewController] setMovieQuote:movieQuote];
+        RHDetailViewController* detailViewController = segue.destinationViewController;
+        detailViewController.movieQuote = movieQuote;
     }
 }
 
