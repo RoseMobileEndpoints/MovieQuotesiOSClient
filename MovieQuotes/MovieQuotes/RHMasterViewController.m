@@ -176,6 +176,9 @@
         [self.tableView insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
         // Warning: This animation can cause an issue with localhost testing. If that happens just use reloadData always.
     }
+
+    // TODO: Send a message to the backend to add this quote.
+
 }
 
 @end
