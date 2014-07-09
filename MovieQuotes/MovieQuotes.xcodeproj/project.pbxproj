@@ -24,36 +24,6 @@
 		FD2D9AEC196CEE2900E59F80 /* MovieQuotesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2D9AEB196CEE2900E59F80 /* MovieQuotesTests.m */; };
 		FD2D9AFA196CFF5B00E59F80 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD2D9AF9196CFF5B00E59F80 /* Security.framework */; };
 		FD2D9AFC196CFF6800E59F80 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD2D9AFB196CFF6800E59F80 /* SystemConfiguration.framework */; };
-		FD2D9B60196D035700E59F80 /* GTLMoviequotesConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2D9B57196D035700E59F80 /* GTLMoviequotesConstants.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		FD2D9B61196D035700E59F80 /* GTLMoviequotesMovieQuote.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2D9B59196D035700E59F80 /* GTLMoviequotesMovieQuote.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		FD2D9B62196D035700E59F80 /* GTLMoviequotesMovieQuoteCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2D9B5B196D035700E59F80 /* GTLMoviequotesMovieQuoteCollection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		FD2D9B63196D035700E59F80 /* GTLQueryMoviequotes.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2D9B5D196D035700E59F80 /* GTLQueryMoviequotes.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		FD2D9B64196D035700E59F80 /* GTLServiceMoviequotes.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2D9B5F196D035700E59F80 /* GTLServiceMoviequotes.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		FD2D9B9F196D044500E59F80 /* GTLObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2D9B6E196D044500E59F80 /* GTLObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		FD2D9BA0196D044500E59F80 /* GTLQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2D9B70196D044500E59F80 /* GTLQuery.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		FD2D9BA1196D044500E59F80 /* GTLBatchQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2D9B72196D044500E59F80 /* GTLBatchQuery.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		FD2D9BA2196D044500E59F80 /* GTLService.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2D9B74196D044500E59F80 /* GTLService.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		FD2D9BA3196D044500E59F80 /* GTLBatchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2D9B76196D044500E59F80 /* GTLBatchResult.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		FD2D9BA4196D044500E59F80 /* GTLUploadParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2D9B78196D044500E59F80 /* GTLUploadParameters.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		FD2D9BA5196D044500E59F80 /* GTLDateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2D9B7A196D044500E59F80 /* GTLDateTime.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		FD2D9BA6196D044500E59F80 /* GTLErrorObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2D9B7C196D044500E59F80 /* GTLErrorObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		FD2D9BA7196D044500E59F80 /* GTLRuntimeCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2D9B7E196D044500E59F80 /* GTLRuntimeCommon.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		FD2D9BA8196D044500E59F80 /* GTLFramework.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2D9B80196D044500E59F80 /* GTLFramework.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		FD2D9BA9196D044500E59F80 /* GTLJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2D9B82196D044500E59F80 /* GTLJSONParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		FD2D9BAA196D044500E59F80 /* GTLUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2D9B85196D044500E59F80 /* GTLUtilities.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		FD2D9BAB196D044500E59F80 /* GTLBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2D9B87196D044500E59F80 /* GTLBase64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		FD2D9BAC196D044500E59F80 /* GTMHTTPFetcherService.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2D9B89196D044500E59F80 /* GTMHTTPFetcherService.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		FD2D9BAD196D044500E59F80 /* GTMHTTPFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2D9B8B196D044500E59F80 /* GTMHTTPFetcher.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		FD2D9BAE196D044500E59F80 /* GTMHTTPFetcherLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2D9B8D196D044500E59F80 /* GTMHTTPFetcherLogging.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		FD2D9BAF196D044500E59F80 /* GTMHTTPFetchHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2D9B8F196D044500E59F80 /* GTMHTTPFetchHistory.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		FD2D9BB0196D044500E59F80 /* GTMHTTPUploadFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2D9B91196D044500E59F80 /* GTMHTTPUploadFetcher.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		FD2D9BB1196D044500E59F80 /* GTMGatherInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2D9B93196D044500E59F80 /* GTMGatherInputStream.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		FD2D9BB2196D044500E59F80 /* GTMMIMEDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2D9B95196D044500E59F80 /* GTMMIMEDocument.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		FD2D9BB3196D044500E59F80 /* GTMReadMonitorInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2D9B97196D044500E59F80 /* GTMReadMonitorInputStream.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		FD2D9BB4196D044500E59F80 /* GTMOAuth2Authentication.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2D9B99196D044500E59F80 /* GTMOAuth2Authentication.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		FD2D9BB5196D044500E59F80 /* GTMOAuth2SignIn.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2D9B9B196D044500E59F80 /* GTMOAuth2SignIn.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		FD2D9BB6196D044500E59F80 /* GTMOAuth2ViewControllerTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2D9B9D196D044500E59F80 /* GTMOAuth2ViewControllerTouch.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		FD2D9BB7196D044500E59F80 /* GTMOAuth2ViewTouch.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD2D9B9E196D044500E59F80 /* GTMOAuth2ViewTouch.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,68 +60,6 @@
 		FD2D9AEB196CEE2900E59F80 /* MovieQuotesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieQuotesTests.m; sourceTree = "<group>"; };
 		FD2D9AF9196CFF5B00E59F80 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		FD2D9AFB196CFF6800E59F80 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		FD2D9B55196D035700E59F80 /* GTLMoviequotes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLMoviequotes.h; sourceTree = "<group>"; };
-		FD2D9B56196D035700E59F80 /* GTLMoviequotesConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLMoviequotesConstants.h; sourceTree = "<group>"; };
-		FD2D9B57196D035700E59F80 /* GTLMoviequotesConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLMoviequotesConstants.m; sourceTree = "<group>"; };
-		FD2D9B58196D035700E59F80 /* GTLMoviequotesMovieQuote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLMoviequotesMovieQuote.h; sourceTree = "<group>"; };
-		FD2D9B59196D035700E59F80 /* GTLMoviequotesMovieQuote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLMoviequotesMovieQuote.m; sourceTree = "<group>"; };
-		FD2D9B5A196D035700E59F80 /* GTLMoviequotesMovieQuoteCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLMoviequotesMovieQuoteCollection.h; sourceTree = "<group>"; };
-		FD2D9B5B196D035700E59F80 /* GTLMoviequotesMovieQuoteCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLMoviequotesMovieQuoteCollection.m; sourceTree = "<group>"; };
-		FD2D9B5C196D035700E59F80 /* GTLQueryMoviequotes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLQueryMoviequotes.h; sourceTree = "<group>"; };
-		FD2D9B5D196D035700E59F80 /* GTLQueryMoviequotes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLQueryMoviequotes.m; sourceTree = "<group>"; };
-		FD2D9B5E196D035700E59F80 /* GTLServiceMoviequotes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLServiceMoviequotes.h; sourceTree = "<group>"; };
-		FD2D9B5F196D035700E59F80 /* GTLServiceMoviequotes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLServiceMoviequotes.m; sourceTree = "<group>"; };
-		FD2D9B6C196D044500E59F80 /* GTLDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLDefines.h; sourceTree = "<group>"; };
-		FD2D9B6D196D044500E59F80 /* GTLObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLObject.h; sourceTree = "<group>"; };
-		FD2D9B6E196D044500E59F80 /* GTLObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLObject.m; sourceTree = "<group>"; };
-		FD2D9B6F196D044500E59F80 /* GTLQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLQuery.h; sourceTree = "<group>"; };
-		FD2D9B70196D044500E59F80 /* GTLQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLQuery.m; sourceTree = "<group>"; };
-		FD2D9B71196D044500E59F80 /* GTLBatchQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLBatchQuery.h; sourceTree = "<group>"; };
-		FD2D9B72196D044500E59F80 /* GTLBatchQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLBatchQuery.m; sourceTree = "<group>"; };
-		FD2D9B73196D044500E59F80 /* GTLService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLService.h; sourceTree = "<group>"; };
-		FD2D9B74196D044500E59F80 /* GTLService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLService.m; sourceTree = "<group>"; };
-		FD2D9B75196D044500E59F80 /* GTLBatchResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLBatchResult.h; sourceTree = "<group>"; };
-		FD2D9B76196D044500E59F80 /* GTLBatchResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLBatchResult.m; sourceTree = "<group>"; };
-		FD2D9B77196D044500E59F80 /* GTLUploadParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLUploadParameters.h; sourceTree = "<group>"; };
-		FD2D9B78196D044500E59F80 /* GTLUploadParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLUploadParameters.m; sourceTree = "<group>"; };
-		FD2D9B79196D044500E59F80 /* GTLDateTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLDateTime.h; sourceTree = "<group>"; };
-		FD2D9B7A196D044500E59F80 /* GTLDateTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLDateTime.m; sourceTree = "<group>"; };
-		FD2D9B7B196D044500E59F80 /* GTLErrorObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLErrorObject.h; sourceTree = "<group>"; };
-		FD2D9B7C196D044500E59F80 /* GTLErrorObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLErrorObject.m; sourceTree = "<group>"; };
-		FD2D9B7D196D044500E59F80 /* GTLRuntimeCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLRuntimeCommon.h; sourceTree = "<group>"; };
-		FD2D9B7E196D044500E59F80 /* GTLRuntimeCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLRuntimeCommon.m; sourceTree = "<group>"; };
-		FD2D9B7F196D044500E59F80 /* GTLFramework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLFramework.h; sourceTree = "<group>"; };
-		FD2D9B80196D044500E59F80 /* GTLFramework.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLFramework.m; sourceTree = "<group>"; };
-		FD2D9B81196D044500E59F80 /* GTLJSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLJSONParser.h; sourceTree = "<group>"; };
-		FD2D9B82196D044500E59F80 /* GTLJSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLJSONParser.m; sourceTree = "<group>"; };
-		FD2D9B83196D044500E59F80 /* GTLTargetNamespace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLTargetNamespace.h; sourceTree = "<group>"; };
-		FD2D9B84196D044500E59F80 /* GTLUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLUtilities.h; sourceTree = "<group>"; };
-		FD2D9B85196D044500E59F80 /* GTLUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLUtilities.m; sourceTree = "<group>"; };
-		FD2D9B86196D044500E59F80 /* GTLBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLBase64.h; sourceTree = "<group>"; };
-		FD2D9B87196D044500E59F80 /* GTLBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLBase64.m; sourceTree = "<group>"; };
-		FD2D9B88196D044500E59F80 /* GTMHTTPFetcherService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMHTTPFetcherService.h; sourceTree = "<group>"; };
-		FD2D9B89196D044500E59F80 /* GTMHTTPFetcherService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMHTTPFetcherService.m; sourceTree = "<group>"; };
-		FD2D9B8A196D044500E59F80 /* GTMHTTPFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMHTTPFetcher.h; sourceTree = "<group>"; };
-		FD2D9B8B196D044500E59F80 /* GTMHTTPFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMHTTPFetcher.m; sourceTree = "<group>"; };
-		FD2D9B8C196D044500E59F80 /* GTMHTTPFetcherLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMHTTPFetcherLogging.h; sourceTree = "<group>"; };
-		FD2D9B8D196D044500E59F80 /* GTMHTTPFetcherLogging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMHTTPFetcherLogging.m; sourceTree = "<group>"; };
-		FD2D9B8E196D044500E59F80 /* GTMHTTPFetchHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMHTTPFetchHistory.h; sourceTree = "<group>"; };
-		FD2D9B8F196D044500E59F80 /* GTMHTTPFetchHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMHTTPFetchHistory.m; sourceTree = "<group>"; };
-		FD2D9B90196D044500E59F80 /* GTMHTTPUploadFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMHTTPUploadFetcher.h; sourceTree = "<group>"; };
-		FD2D9B91196D044500E59F80 /* GTMHTTPUploadFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMHTTPUploadFetcher.m; sourceTree = "<group>"; };
-		FD2D9B92196D044500E59F80 /* GTMGatherInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMGatherInputStream.h; sourceTree = "<group>"; };
-		FD2D9B93196D044500E59F80 /* GTMGatherInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMGatherInputStream.m; sourceTree = "<group>"; };
-		FD2D9B94196D044500E59F80 /* GTMMIMEDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMMIMEDocument.h; sourceTree = "<group>"; };
-		FD2D9B95196D044500E59F80 /* GTMMIMEDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMMIMEDocument.m; sourceTree = "<group>"; };
-		FD2D9B96196D044500E59F80 /* GTMReadMonitorInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMReadMonitorInputStream.h; sourceTree = "<group>"; };
-		FD2D9B97196D044500E59F80 /* GTMReadMonitorInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMReadMonitorInputStream.m; sourceTree = "<group>"; };
-		FD2D9B98196D044500E59F80 /* GTMOAuth2Authentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMOAuth2Authentication.h; sourceTree = "<group>"; };
-		FD2D9B99196D044500E59F80 /* GTMOAuth2Authentication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMOAuth2Authentication.m; sourceTree = "<group>"; };
-		FD2D9B9A196D044500E59F80 /* GTMOAuth2SignIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMOAuth2SignIn.h; sourceTree = "<group>"; };
-		FD2D9B9B196D044500E59F80 /* GTMOAuth2SignIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMOAuth2SignIn.m; sourceTree = "<group>"; };
-		FD2D9B9C196D044500E59F80 /* GTMOAuth2ViewControllerTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMOAuth2ViewControllerTouch.h; sourceTree = "<group>"; };
-		FD2D9B9D196D044500E59F80 /* GTMOAuth2ViewControllerTouch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMOAuth2ViewControllerTouch.m; sourceTree = "<group>"; };
-		FD2D9B9E196D044500E59F80 /* GTMOAuth2ViewTouch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GTMOAuth2ViewTouch.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,7 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				FD2D9B54196D034700E59F80 /* MovieQuotesAPI */,
-				FD2D9AFD196D000E00E59F80 /* iOSGoogleLibrary */,
+				FD2D9AFD196D000E00E59F80 /* GTL Client Library */,
 				FD2D9ACC196CEE2900E59F80 /* RHAppDelegate.h */,
 				FD2D9ACD196CEE2900E59F80 /* RHAppDelegate.m */,
 				FD2D9ACF196CEE2900E59F80 /* Main.storyboard */,
@@ -267,78 +175,16 @@
 			name = "View Controllers";
 			sourceTree = "<group>";
 		};
-		FD2D9AFD196D000E00E59F80 /* iOSGoogleLibrary */ = {
+		FD2D9AFD196D000E00E59F80 /* GTL Client Library */ = {
 			isa = PBXGroup;
 			children = (
-				FD2D9B6C196D044500E59F80 /* GTLDefines.h */,
-				FD2D9B6D196D044500E59F80 /* GTLObject.h */,
-				FD2D9B6E196D044500E59F80 /* GTLObject.m */,
-				FD2D9B6F196D044500E59F80 /* GTLQuery.h */,
-				FD2D9B70196D044500E59F80 /* GTLQuery.m */,
-				FD2D9B71196D044500E59F80 /* GTLBatchQuery.h */,
-				FD2D9B72196D044500E59F80 /* GTLBatchQuery.m */,
-				FD2D9B73196D044500E59F80 /* GTLService.h */,
-				FD2D9B74196D044500E59F80 /* GTLService.m */,
-				FD2D9B75196D044500E59F80 /* GTLBatchResult.h */,
-				FD2D9B76196D044500E59F80 /* GTLBatchResult.m */,
-				FD2D9B77196D044500E59F80 /* GTLUploadParameters.h */,
-				FD2D9B78196D044500E59F80 /* GTLUploadParameters.m */,
-				FD2D9B79196D044500E59F80 /* GTLDateTime.h */,
-				FD2D9B7A196D044500E59F80 /* GTLDateTime.m */,
-				FD2D9B7B196D044500E59F80 /* GTLErrorObject.h */,
-				FD2D9B7C196D044500E59F80 /* GTLErrorObject.m */,
-				FD2D9B7D196D044500E59F80 /* GTLRuntimeCommon.h */,
-				FD2D9B7E196D044500E59F80 /* GTLRuntimeCommon.m */,
-				FD2D9B7F196D044500E59F80 /* GTLFramework.h */,
-				FD2D9B80196D044500E59F80 /* GTLFramework.m */,
-				FD2D9B81196D044500E59F80 /* GTLJSONParser.h */,
-				FD2D9B82196D044500E59F80 /* GTLJSONParser.m */,
-				FD2D9B83196D044500E59F80 /* GTLTargetNamespace.h */,
-				FD2D9B84196D044500E59F80 /* GTLUtilities.h */,
-				FD2D9B85196D044500E59F80 /* GTLUtilities.m */,
-				FD2D9B86196D044500E59F80 /* GTLBase64.h */,
-				FD2D9B87196D044500E59F80 /* GTLBase64.m */,
-				FD2D9B88196D044500E59F80 /* GTMHTTPFetcherService.h */,
-				FD2D9B89196D044500E59F80 /* GTMHTTPFetcherService.m */,
-				FD2D9B8A196D044500E59F80 /* GTMHTTPFetcher.h */,
-				FD2D9B8B196D044500E59F80 /* GTMHTTPFetcher.m */,
-				FD2D9B8C196D044500E59F80 /* GTMHTTPFetcherLogging.h */,
-				FD2D9B8D196D044500E59F80 /* GTMHTTPFetcherLogging.m */,
-				FD2D9B8E196D044500E59F80 /* GTMHTTPFetchHistory.h */,
-				FD2D9B8F196D044500E59F80 /* GTMHTTPFetchHistory.m */,
-				FD2D9B90196D044500E59F80 /* GTMHTTPUploadFetcher.h */,
-				FD2D9B91196D044500E59F80 /* GTMHTTPUploadFetcher.m */,
-				FD2D9B92196D044500E59F80 /* GTMGatherInputStream.h */,
-				FD2D9B93196D044500E59F80 /* GTMGatherInputStream.m */,
-				FD2D9B94196D044500E59F80 /* GTMMIMEDocument.h */,
-				FD2D9B95196D044500E59F80 /* GTMMIMEDocument.m */,
-				FD2D9B96196D044500E59F80 /* GTMReadMonitorInputStream.h */,
-				FD2D9B97196D044500E59F80 /* GTMReadMonitorInputStream.m */,
-				FD2D9B98196D044500E59F80 /* GTMOAuth2Authentication.h */,
-				FD2D9B99196D044500E59F80 /* GTMOAuth2Authentication.m */,
-				FD2D9B9A196D044500E59F80 /* GTMOAuth2SignIn.h */,
-				FD2D9B9B196D044500E59F80 /* GTMOAuth2SignIn.m */,
-				FD2D9B9C196D044500E59F80 /* GTMOAuth2ViewControllerTouch.h */,
-				FD2D9B9D196D044500E59F80 /* GTMOAuth2ViewControllerTouch.m */,
-				FD2D9B9E196D044500E59F80 /* GTMOAuth2ViewTouch.xib */,
 			);
-			name = iOSGoogleLibrary;
+			name = "GTL Client Library";
 			sourceTree = "<group>";
 		};
 		FD2D9B54196D034700E59F80 /* MovieQuotesAPI */ = {
 			isa = PBXGroup;
 			children = (
-				FD2D9B55196D035700E59F80 /* GTLMoviequotes.h */,
-				FD2D9B56196D035700E59F80 /* GTLMoviequotesConstants.h */,
-				FD2D9B57196D035700E59F80 /* GTLMoviequotesConstants.m */,
-				FD2D9B58196D035700E59F80 /* GTLMoviequotesMovieQuote.h */,
-				FD2D9B59196D035700E59F80 /* GTLMoviequotesMovieQuote.m */,
-				FD2D9B5A196D035700E59F80 /* GTLMoviequotesMovieQuoteCollection.h */,
-				FD2D9B5B196D035700E59F80 /* GTLMoviequotesMovieQuoteCollection.m */,
-				FD2D9B5C196D035700E59F80 /* GTLQueryMoviequotes.h */,
-				FD2D9B5D196D035700E59F80 /* GTLQueryMoviequotes.m */,
-				FD2D9B5E196D035700E59F80 /* GTLServiceMoviequotes.h */,
-				FD2D9B5F196D035700E59F80 /* GTLServiceMoviequotes.m */,
 			);
 			name = MovieQuotesAPI;
 			sourceTree = "<group>";
@@ -420,7 +266,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD2D9BB7196D044500E59F80 /* GTMOAuth2ViewTouch.xib in Resources */,
 				FD2D9AD9196CEE2900E59F80 /* Images.xcassets in Resources */,
 				FD2D9AC8196CEE2900E59F80 /* InfoPlist.strings in Resources */,
 				FD2D9AD1196CEE2900E59F80 /* Main.storyboard in Resources */,
@@ -442,39 +287,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD2D9BAA196D044500E59F80 /* GTLUtilities.m in Sources */,
-				FD2D9BA4196D044500E59F80 /* GTLUploadParameters.m in Sources */,
-				FD2D9BA9196D044500E59F80 /* GTLJSONParser.m in Sources */,
 				FD2D9ACE196CEE2900E59F80 /* RHAppDelegate.m in Sources */,
-				FD2D9BAC196D044500E59F80 /* GTMHTTPFetcherService.m in Sources */,
-				FD2D9BA3196D044500E59F80 /* GTLBatchResult.m in Sources */,
-				FD2D9BA2196D044500E59F80 /* GTLService.m in Sources */,
-				FD2D9BB5196D044500E59F80 /* GTMOAuth2SignIn.m in Sources */,
-				FD2D9B60196D035700E59F80 /* GTLMoviequotesConstants.m in Sources */,
-				FD2D9B61196D035700E59F80 /* GTLMoviequotesMovieQuote.m in Sources */,
-				FD2D9BAB196D044500E59F80 /* GTLBase64.m in Sources */,
-				FD2D9B62196D035700E59F80 /* GTLMoviequotesMovieQuoteCollection.m in Sources */,
-				FD2D9BB2196D044500E59F80 /* GTMMIMEDocument.m in Sources */,
-				FD2D9B64196D035700E59F80 /* GTLServiceMoviequotes.m in Sources */,
-				FD2D9BB6196D044500E59F80 /* GTMOAuth2ViewControllerTouch.m in Sources */,
-				FD2D9BB1196D044500E59F80 /* GTMGatherInputStream.m in Sources */,
 				FD2D9AD4196CEE2900E59F80 /* RHMasterViewController.m in Sources */,
-				FD2D9BB4196D044500E59F80 /* GTMOAuth2Authentication.m in Sources */,
-				FD2D9BA5196D044500E59F80 /* GTLDateTime.m in Sources */,
-				FD2D9BA0196D044500E59F80 /* GTLQuery.m in Sources */,
-				FD2D9BB0196D044500E59F80 /* GTMHTTPUploadFetcher.m in Sources */,
-				FD2D9B9F196D044500E59F80 /* GTLObject.m in Sources */,
 				FD2D9ACA196CEE2900E59F80 /* main.m in Sources */,
-				FD2D9BB3196D044500E59F80 /* GTMReadMonitorInputStream.m in Sources */,
-				FD2D9BA7196D044500E59F80 /* GTLRuntimeCommon.m in Sources */,
-				FD2D9BAF196D044500E59F80 /* GTMHTTPFetchHistory.m in Sources */,
 				FD2D9AD7196CEE2900E59F80 /* RHDetailViewController.m in Sources */,
-				FD2D9BA6196D044500E59F80 /* GTLErrorObject.m in Sources */,
-				FD2D9B63196D035700E59F80 /* GTLQueryMoviequotes.m in Sources */,
-				FD2D9BA8196D044500E59F80 /* GTLFramework.m in Sources */,
-				FD2D9BA1196D044500E59F80 /* GTLBatchQuery.m in Sources */,
-				FD2D9BAE196D044500E59F80 /* GTMHTTPFetcherLogging.m in Sources */,
-				FD2D9BAD196D044500E59F80 /* GTMHTTPFetcher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -679,6 +495,7 @@
 				FD2D9AF1196CEE2900E59F80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FD2D9AF2196CEE2900E59F80 /* Build configuration list for PBXNativeTarget "MovieQuotesTests" */ = {
 			isa = XCConfigurationList;
@@ -687,6 +504,7 @@
 				FD2D9AF4196CEE2900E59F80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
