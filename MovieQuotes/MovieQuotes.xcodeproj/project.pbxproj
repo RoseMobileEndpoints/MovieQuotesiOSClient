@@ -22,7 +22,6 @@
 		FD2D9AE2196CEE2900E59F80 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD2D9AC1196CEE2900E59F80 /* UIKit.framework */; };
 		FD2D9AEA196CEE2900E59F80 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FD2D9AE8196CEE2900E59F80 /* InfoPlist.strings */; };
 		FD2D9AEC196CEE2900E59F80 /* MovieQuotesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2D9AEB196CEE2900E59F80 /* MovieQuotesTests.m */; };
-		FD2D9AF7196CF54F00E59F80 /* RHTemporaryMovieQuoteModelObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2D9AF6196CF54F00E59F80 /* RHTemporaryMovieQuoteModelObject.m */; };
 		FD2D9AFA196CFF5B00E59F80 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD2D9AF9196CFF5B00E59F80 /* Security.framework */; };
 		FD2D9AFC196CFF6800E59F80 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD2D9AFB196CFF6800E59F80 /* SystemConfiguration.framework */; };
 		FD2D9B60196D035700E59F80 /* GTLMoviequotesConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2D9B57196D035700E59F80 /* GTLMoviequotesConstants.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -89,8 +88,6 @@
 		FD2D9AE7196CEE2900E59F80 /* MovieQuotesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MovieQuotesTests-Info.plist"; sourceTree = "<group>"; };
 		FD2D9AE9196CEE2900E59F80 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FD2D9AEB196CEE2900E59F80 /* MovieQuotesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieQuotesTests.m; sourceTree = "<group>"; };
-		FD2D9AF5196CF54F00E59F80 /* RHTemporaryMovieQuoteModelObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHTemporaryMovieQuoteModelObject.h; sourceTree = "<group>"; };
-		FD2D9AF6196CF54F00E59F80 /* RHTemporaryMovieQuoteModelObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHTemporaryMovieQuoteModelObject.m; sourceTree = "<group>"; };
 		FD2D9AF9196CFF5B00E59F80 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		FD2D9AFB196CFF6800E59F80 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		FD2D9B55196D035700E59F80 /* GTLMoviequotes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLMoviequotes.h; sourceTree = "<group>"; };
@@ -226,8 +223,6 @@
 				FD2D9AF8196CFA1B00E59F80 /* View Controllers */,
 				FD2D9AD8196CEE2900E59F80 /* Images.xcassets */,
 				FD2D9AC4196CEE2900E59F80 /* Supporting Files */,
-				FD2D9AF5196CF54F00E59F80 /* RHTemporaryMovieQuoteModelObject.h */,
-				FD2D9AF6196CF54F00E59F80 /* RHTemporaryMovieQuoteModelObject.m */,
 			);
 			path = MovieQuotes;
 			sourceTree = "<group>";
@@ -471,7 +466,6 @@
 				FD2D9B9F196D044500E59F80 /* GTLObject.m in Sources */,
 				FD2D9ACA196CEE2900E59F80 /* main.m in Sources */,
 				FD2D9BB3196D044500E59F80 /* GTMReadMonitorInputStream.m in Sources */,
-				FD2D9AF7196CF54F00E59F80 /* RHTemporaryMovieQuoteModelObject.m in Sources */,
 				FD2D9BA7196D044500E59F80 /* GTLRuntimeCommon.m in Sources */,
 				FD2D9BAF196D044500E59F80 /* GTMHTTPFetchHistory.m in Sources */,
 				FD2D9AD7196CEE2900E59F80 /* RHDetailViewController.m in Sources */,
