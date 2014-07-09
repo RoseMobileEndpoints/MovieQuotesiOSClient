@@ -9,9 +9,13 @@
 #import <UIKit/UIKit.h>
 @class GTLMoviequotesMovieQuote;
 
-@interface RHDetailViewController : UIViewController
+#define kQuoteTextFieldIndex              0
+#define kMovieTitleTextFieldIndex         1
 
-@property (strong, nonatomic) GTLMoviequotesMovieQuote* quote;
+
+@interface RHDetailViewController : UIViewController <UIAlertViewDelegate>
+
+@property (strong, nonatomic) GTLMoviequotesMovieQuote* movieQuote;
 @property (weak, nonatomic) IBOutlet UILabel* quoteLabel;
 @property (weak, nonatomic) IBOutlet UILabel* movieTitleLabel;
 

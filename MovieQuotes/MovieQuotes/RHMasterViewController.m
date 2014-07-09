@@ -15,9 +15,6 @@
 #define kLoadingMovieQuotesCellIdentifier @"LoadingMovieQuotesCell"
 #define kNoMovieQuotesCellIdentifier      @"NoMovieQuotesCell"
 #define kPushDetailQuoteSegue             @"PushDetailQuoteSegue"
-#define kQuoteTextFieldIndex              0
-#define kMovieTitleTextFieldIndex         1
-
 
 @interface RHMasterViewController ()
 @property (nonatomic) BOOL initialQueryComplete;
@@ -33,21 +30,23 @@
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
                                                                                target:self
-                                                                               action:@selector(insertNewObject:)];
+                                                                               action:@selector(showNewQuoteAlertView:)];
     self.navigationItem.rightBarButtonItem = addButton;
 }
 
 
-- (void) viewWillAppear:(BOOL)animated {
-
-    // TODO: Query the backend
+- (void) viewWillAppear:(BOOL) animated {
+    [super viewWillAppear:animated];
+    // TODO: Query the backend for the latest movie quotes.
     self.initialQueryComplete = YES; // TODO: Delete this line.
     //self.initialQueryComplete = NO;
+
     //[self _queryForQuotes];
+    [self.tableView reloadData];
 }
 
 
-- (void)insertNewObject:(id)sender {
+- (void) showNewQuoteAlertView:(id) sender {
     UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Create a new quote"
                                                     message:@""
                                                    delegate:self
@@ -67,24 +66,23 @@
     if (_quotes == nil) {
         _quotes = [[NSMutableArray alloc] init];
 
-        // Add some code for initial testing.
-//        GTLMoviequotesMovieQuote* mq1 = [[GTLMoviequotesMovieQuote alloc] init];
-//        mq1.quote = @"Local quote 1";
-//        mq1.movie = @"Local movie 1";
-//        [_quotes addObject:mq1];
-//
-//
-//        GTLMoviequotesMovieQuote* mq2 = [[GTLMoviequotesMovieQuote alloc] init];
-//        mq2.quote = @"Local quote 2";
-//        mq2.movie = @"Local movie 2";
-//        [_quotes addObject:mq2];
-//
-//
-//        GTLMoviequotesMovieQuote* mq3 = [[GTLMoviequotesMovieQuote alloc] init];
-//        mq3.quote = @"Local quote 3";
-//        mq3.movie = @"Local movie 3";
-//        [_quotes addObject:mq3];
-
+        // Optional: Add some code for initial testing.
+        //        GTLMoviequotesMovieQuote* mq1 = [[GTLMoviequotesMovieQuote alloc] init];
+        //        mq1.quote = @"Local quote 1";
+        //        mq1.movie = @"Local movie 1";
+        //        [_quotes addObject:mq1];
+        //
+        //
+        //        GTLMoviequotesMovieQuote* mq2 = [[GTLMoviequotesMovieQuote alloc] init];
+        //        mq2.quote = @"Local quote 2";
+        //        mq2.movie = @"Local movie 2";
+        //        [_quotes addObject:mq2];
+        //
+        //
+        //        GTLMoviequotesMovieQuote* mq3 = [[GTLMoviequotesMovieQuote alloc] init];
+        //        mq3.quote = @"Local quote 3";
+        //        mq3.movie = @"Local movie 3";
+        //        [_quotes addObject:mq3];
     }
     return _quotes;
 }
@@ -92,6 +90,7 @@
 #pragma mark - Table View
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    self.navigationItem.leftBarButtonItem.enabled = self.quotes.count > 0;
     return (self.quotes.count == 0) ? 1 : self.quotes.count;
 }
 
@@ -117,6 +116,7 @@
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
+
 
 - (BOOL)tableView:(UITableView*) tableView canEditRowAtIndexPath:(NSIndexPath*) indexPath {
     // Return NO if you do not want the specified item to be editable.
@@ -144,12 +144,12 @@
     if ([[segue identifier] isEqualToString:kPushDetailQuoteSegue]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         GTLMoviequotesMovieQuote *movieQuote = self.quotes[indexPath.row];
-        [[segue destinationViewController] setQuote:movieQuote];
+        [[segue destinationViewController] setMovieQuote:movieQuote];
     }
 }
 
-#pragma mark - UIAlertViewDelegate
 
+#pragma mark - UIAlertViewDelegate
 
 // Called when a button is clicked. The view will be automatically dismissed after this call returns
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
@@ -160,7 +160,6 @@
 
     NSString* movieTitle = [[alertView textFieldAtIndex:kMovieTitleTextFieldIndex] text];
     NSString* quote = [[alertView textFieldAtIndex:kQuoteTextFieldIndex] text];
-
 
     GTLMoviequotesMovieQuote* newQuote = [[GTLMoviequotesMovieQuote alloc] init];
     newQuote.movie = movieTitle;
@@ -177,6 +176,5 @@
         // Warning: This animation can cause an issue with localhost testing. If that happens just use reloadData always.
     }
 }
-
 
 @end
