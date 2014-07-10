@@ -16,8 +16,9 @@
 #define kNoMovieQuotesCellIdentifier      @"NoMovieQuotesCell"
 #define kPushDetailQuoteSegue             @"PushDetailQuoteSegue"
 
-#define kLocalhostTesting                 NO
-#define kLocalhostRpcUrl                  @"http://localhost:8080/_ah/api/rpc?prettyPrint=false"
+#define kLocalhostTesting                 YES
+//#define kLocalhostRpcUrl                  @"http://localhost:8080/_ah/api/rpc?prettyPrint=false"
+#define kLocalhostRpcUrl                  @"http://137.112.37.118:8080/_ah/api/rpc?prettyPrint=false"
 
 @interface RHMasterViewController ()
 @property (nonatomic) BOOL initialQueryComplete;
