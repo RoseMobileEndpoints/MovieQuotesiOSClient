@@ -119,8 +119,6 @@
 		FD2D9AC3196CEE2900E59F80 /* MovieQuotes */ = {
 			isa = PBXGroup;
 			children = (
-				FD2D9B54196D034700E59F80 /* MovieQuotesAPI */,
-				FD2D9AFD196D000E00E59F80 /* GTL Client Library */,
 				FD2D9ACC196CEE2900E59F80 /* RHAppDelegate.h */,
 				FD2D9ACD196CEE2900E59F80 /* RHAppDelegate.m */,
 				FD2D9ACF196CEE2900E59F80 /* Main.storyboard */,
@@ -169,20 +167,6 @@
 				FD2D9AD6196CEE2900E59F80 /* RHDetailViewController.m */,
 			);
 			name = "View Controllers";
-			sourceTree = "<group>";
-		};
-		FD2D9AFD196D000E00E59F80 /* GTL Client Library */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "GTL Client Library";
-			sourceTree = "<group>";
-		};
-		FD2D9B54196D034700E59F80 /* MovieQuotesAPI */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = MovieQuotesAPI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
