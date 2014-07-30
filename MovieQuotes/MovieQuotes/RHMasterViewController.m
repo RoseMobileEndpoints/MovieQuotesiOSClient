@@ -16,7 +16,7 @@
 #define kNoMovieQuotesCellIdentifier      @"NoMovieQuotesCell"
 #define kPushDetailQuoteSegue             @"PushDetailQuoteSegue"
 
-#define kLocalhostTesting                 YES
+#define kLocalhostTesting                 NO
 //#define kLocalhostRpcUrl                  @"http://localhost:8080/_ah/api/rpc?prettyPrint=false"
 #define kLocalhostRpcUrl                  @"http://137.112.37.118:8080/_ah/api/rpc?prettyPrint=false"
 
@@ -212,18 +212,18 @@
     query.order = @"-last_touch_date_time";
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     [self.service executeQuery:query completionHandler:^(GTLServiceTicket* ticket,
-                                                         GTLMoviequotesMovieQuoteCollection* movieQuotes,
+                                                         GTLMoviequotesMovieQuoteCollection* response,
                                                          NSError* error) {
         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
         self.initialQueryComplete = YES;
         if (error != nil){
             [self _showErrorDialog:error];
         } else {
-            self.quotes = [movieQuotes.items mutableCopy];
+            self.quotes = [response.items mutableCopy];
 
             // Informational log message that we won't deal with in this example.
-            if (movieQuotes.nextPageToken != nil) {
-                NSLog(@"Note, there are more quotes on the server.  You could call query again to get more using the page token %@", movieQuotes.nextPageToken);
+            if (response.nextPageToken != nil) {
+                NSLog(@"Note, there are more quotes on the server.  You could call query again to get more using the page token %@", response.nextPageToken);
             }
         }
         [self.tableView reloadData];
@@ -252,13 +252,8 @@
             newQuote.entityKey = returnedMovieQuote.entityKey;
         }
 
-        // Totally optional.  Look for other new quotes now.
-        if (kLocalhostTesting) {
-            // Add a delay to allow the UITableViewRowAnimation to complete before a new query.
-            [self performSelector:@selector(_queryForQuotes) withObject:nil afterDelay:1.0];
-        } else {
-            [self _queryForQuotes];  // Plenty of delay already if using a real backend. :)
-        }
+        // Totally optional.  Look for other new quotes now (after animation).
+        [self performSelector:@selector(_queryForQuotes) withObject:nil afterDelay:1.0];
     }];
 }
 
@@ -277,13 +272,8 @@
 
         // Delete worked.  Good for us.  Already done with delete on client.
 
-        // Totally optional.  Look for other new quotes now.
-        if (kLocalhostTesting) {
-            // Add a delay to allow the UITableViewRowAnimation to complete before a new query.
-            [self performSelector:@selector(_queryForQuotes) withObject:nil afterDelay:1.0];
-        } else {
-            [self _queryForQuotes];  // Plenty of delay already if using a real backend. :)
-        }
+        // Totally optional!
+        [self performSelector:@selector(_queryForQuotes) withObject:nil afterDelay:1.0];
     }];
 }
 
