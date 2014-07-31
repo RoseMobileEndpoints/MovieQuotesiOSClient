@@ -177,7 +177,7 @@
     } else {
         NSIndexPath* newIndexPath = [NSIndexPath indexPathForRow:0 inSection:0];
         [self.tableView insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-        // Warning: This animation can cause an issue with localhost testing. If that happens just use reloadData always.
+        // Warning: This animation can cause an issue if the table reloads while the animation is in progress.
     }
 
     // TODO: Send a message to the backend to add this quote.
