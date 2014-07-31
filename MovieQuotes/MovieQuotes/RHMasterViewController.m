@@ -247,10 +247,9 @@
         if (error != nil) {
             [self _showErrorDialog:error];
             return;
-        } else {
-            // Update this newQuote with the entityKey of the returnedQuote
-            newQuote.entityKey = returnedMovieQuote.entityKey;
         }
+        // Update this newQuote with the entityKey of the returnedQuote
+        newQuote.entityKey = returnedMovieQuote.entityKey;
 
         // Totally optional.  Look for other new quotes now (after animation).
         [self performSelector:@selector(_queryForQuotes) withObject:nil afterDelay:1.0];
