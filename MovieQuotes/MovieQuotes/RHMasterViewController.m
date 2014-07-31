@@ -95,6 +95,19 @@
     return _quotes;
 }
 
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:kPushDetailQuoteSegue]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        GTLMoviequotesMovieQuote *movieQuote = self.quotes[indexPath.row];
+        RHDetailViewController* detailViewController = segue.destinationViewController;
+        detailViewController.movieQuote = movieQuote;
+        detailViewController.service = self.service;
+        detailViewController.isLocalHostTesting = kLocalhostTesting;
+    }
+}
+
+
 #pragma mark - Table View
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -135,8 +148,7 @@
 - (void) tableView:(UITableView*) tableView commitEditingStyle:(UITableViewCellEditingStyle) editingStyle forRowAtIndexPath:(NSIndexPath*) indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
 
-        // TODO: Send a message to the backend to remove this quote.
-
+        // DONE: Send a message to the backend to remove this quote.
         GTLMoviequotesMovieQuote* quoteToDelete = self.quotes[indexPath.row];
         [self _deleteQuote:quoteToDelete.entityKey];
 
@@ -147,18 +159,6 @@
         } else {
             [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
         }
-    }
-}
-
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([[segue identifier] isEqualToString:kPushDetailQuoteSegue]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        GTLMoviequotesMovieQuote *movieQuote = self.quotes[indexPath.row];
-        RHDetailViewController* detailViewController = segue.destinationViewController;
-        detailViewController.movieQuote = movieQuote;
-        detailViewController.service = self.service;
-        detailViewController.isLocalHostTesting = kLocalhostTesting;
     }
 }
 
@@ -187,7 +187,7 @@
     } else {
         NSIndexPath* newIndexPath = [NSIndexPath indexPathForRow:0 inSection:0];
         [self.tableView insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-        // Warning: This animation can cause an issue with localhost inserts (localhost is too fast :) ).
+        // Warning: This animation can cause an issue if the table reloads while the animation is in progress.
     }
     [self _insertQuote:newQuote];
 }
