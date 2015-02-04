@@ -10,29 +10,29 @@
 	<string>MovieQuotes</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>9C270B7F-F074-4E43-BF19-F537959C7C1D</key>
+		<key>4718E80FE074E1862263A95627455EC18DA2B27F</key>
 		<string>https://github.com/RoseMobileEndpoints/MovieQuotesiOSClient.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>MovieQuotes/MovieQuotes.xcodeproj/project.xcworkspace</string>
+	<string>MovieQuotes/MovieQuotes.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>9C270B7F-F074-4E43-BF19-F537959C7C1D</key>
+		<key>4718E80FE074E1862263A95627455EC18DA2B27F</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/RoseMobileEndpoints/MovieQuotesiOSClient.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>9C270B7F-F074-4E43-BF19-F537959C7C1D</string>
+	<string>4718E80FE074E1862263A95627455EC18DA2B27F</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>9C270B7F-F074-4E43-BF19-F537959C7C1D</string>
+			<string>4718E80FE074E1862263A95627455EC18DA2B27F</string>
 			<key>IDESourceControlWCCName</key>
 			<string>MovieQuotesiOSClient</string>
 		</dict>
