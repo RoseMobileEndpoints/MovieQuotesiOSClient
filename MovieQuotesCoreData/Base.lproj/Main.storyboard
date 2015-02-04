@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Rsc-ja-Mpd">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Movie Quotes-->
+        <scene sceneID="ZZ3-l2-XRk">
+            <objects>
+                <tableViewController id="oHg-bV-Hr4" customClass="MovieQuotesTableViewController" customModule="MovieQuotesCoreData" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="lwF-u7-Yab">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieQuoteCell" textLabel="BKd-X1-V3M" detailTextLabel="aDh-wY-UKV" style="IBUITableViewCellStyleSubtitle" id="J2T-eR-Na6">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="J2T-eR-Na6" id="TBg-Yi-JpJ">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BKd-X1-V3M">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="heightClass=regular-widthClass=compact">
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            </variation>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aDh-wY-UKV">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="heightClass=regular-widthClass=compact">
+                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            </variation>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Irz-9i-VPC" kind="show" identifier="ShowDetailSegue" id="VFC-j2-u1N"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NoMovieQuotesCell" textLabel="WJo-tT-VwC" style="IBUITableViewCellStyleDefault" id="RQM-1P-Lnm">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RQM-1P-Lnm" id="1Y8-O0-jot">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="No Movie Quotes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WJo-tT-VwC">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="heightClass=regular-widthClass=compact">
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            </variation>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="oHg-bV-Hr4" id="lUr-3W-juI"/>
+                            <outlet property="delegate" destination="oHg-bV-Hr4" id="vmA-Hv-t9x"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Movie Quotes" id="MqK-OU-FrK"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qqE-F8-dqy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1186.5" y="-102.75"/>
+        </scene>
+        <!--Movie Quote Detail View Controller-->
+        <scene sceneID="CVV-W2-F0o">
+            <objects>
+                <viewController id="Irz-9i-VPC" customClass="MovieQuoteDetailViewController" customModule="MovieQuotesCoreData" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iF5-LG-WHk"/>
+                        <viewControllerLayoutGuide type="bottom" id="x8P-Gv-1ok"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bqc-Qw-pjG">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quote:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aLZ-Ci-fEO">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="quote goes here" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jn7-15-g1g">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="w0Y-fZ-Lfw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="w0Y-fZ-Lfw"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="w0Y-fZ-Lfw"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ciA-1O-4Hm">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="movie goes here" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bOL-8T-X8V">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="ZcF-Dj-4JG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ZcF-Dj-4JG"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="ZcF-Dj-4JG"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bOL-8T-X8V" firstAttribute="top" secondItem="ciA-1O-4Hm" secondAttribute="bottom" constant="8" id="CtF-eG-jFe"/>
+                            <constraint firstItem="aLZ-Ci-fEO" firstAttribute="top" secondItem="iF5-LG-WHk" secondAttribute="bottom" constant="8" id="H91-N4-htd"/>
+                            <constraint firstItem="Jn7-15-g1g" firstAttribute="leading" secondItem="bqc-Qw-pjG" secondAttribute="leadingMargin" id="Hd9-KZ-e9m"/>
+                            <constraint firstItem="bOL-8T-X8V" firstAttribute="leading" secondItem="bqc-Qw-pjG" secondAttribute="leadingMargin" id="Xig-iO-0Zy"/>
+                            <constraint firstItem="aLZ-Ci-fEO" firstAttribute="leading" secondItem="bqc-Qw-pjG" secondAttribute="leadingMargin" id="YYF-5Z-m7e"/>
+                            <constraint firstItem="Jn7-15-g1g" firstAttribute="trailing" secondItem="bqc-Qw-pjG" secondAttribute="trailingMargin" id="dcX-Nx-zkO"/>
+                            <constraint firstItem="ciA-1O-4Hm" firstAttribute="top" secondItem="Jn7-15-g1g" secondAttribute="bottom" constant="8" id="fEw-nT-O5U"/>
+                            <constraint firstItem="Jn7-15-g1g" firstAttribute="top" secondItem="aLZ-Ci-fEO" secondAttribute="bottom" constant="8" id="gim-tG-DGz"/>
+                            <constraint firstItem="bOL-8T-X8V" firstAttribute="trailing" secondItem="bqc-Qw-pjG" secondAttribute="trailingMargin" id="kes-Tl-xz3"/>
+                            <constraint firstItem="ciA-1O-4Hm" firstAttribute="leading" secondItem="bqc-Qw-pjG" secondAttribute="leadingMargin" id="vyw-1c-Fkm"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="aLZ-Ci-fEO"/>
+                                <exclude reference="Jn7-15-g1g"/>
+                                <exclude reference="ciA-1O-4Hm"/>
+                                <exclude reference="bOL-8T-X8V"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="H91-N4-htd"/>
+                                <exclude reference="YYF-5Z-m7e"/>
+                                <exclude reference="Hd9-KZ-e9m"/>
+                                <exclude reference="dcX-Nx-zkO"/>
+                                <exclude reference="gim-tG-DGz"/>
+                                <exclude reference="fEw-nT-O5U"/>
+                                <exclude reference="vyw-1c-Fkm"/>
+                                <exclude reference="CtF-eG-jFe"/>
+                                <exclude reference="Xig-iO-0Zy"/>
+                                <exclude reference="kes-Tl-xz3"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="aLZ-Ci-fEO"/>
+                                <include reference="Jn7-15-g1g"/>
+                                <include reference="ciA-1O-4Hm"/>
+                                <include reference="bOL-8T-X8V"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="H91-N4-htd"/>
+                                <include reference="YYF-5Z-m7e"/>
+                                <include reference="Hd9-KZ-e9m"/>
+                                <include reference="dcX-Nx-zkO"/>
+                                <include reference="gim-tG-DGz"/>
+                                <include reference="fEw-nT-O5U"/>
+                                <include reference="vyw-1c-Fkm"/>
+                                <include reference="CtF-eG-jFe"/>
+                                <include reference="Xig-iO-0Zy"/>
+                                <include reference="kes-Tl-xz3"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="movieLabel" destination="bOL-8T-X8V" id="VC3-Uf-uF2"/>
+                        <outlet property="quoteLabel" destination="Jn7-15-g1g" id="iVr-1V-9a2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bi0-tO-29a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1986" y="-102.75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ndD-42-gA9">
+            <objects>
+                <navigationController id="Rsc-ja-Mpd" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LAj-tw-9Hd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="oHg-bV-Hr4" kind="relationship" relationship="rootViewController" id="Fwl-GF-OK0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sUt-f0-Hdb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="256.5" y="-102.75"/>
+        </scene>
+    </scenes>
+</document>
