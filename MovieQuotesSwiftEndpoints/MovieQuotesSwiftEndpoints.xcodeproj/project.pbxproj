@@ -29,14 +29,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		FD19E4471A72CCC60003C41F /* MovieQuotesCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieQuotesCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD19E4471A72CCC60003C41F /* MovieQuotesSwiftEndpoints.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieQuotesSwiftEndpoints.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD19E44B1A72CCC60003C41F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD19E44C1A72CCC60003C41F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD19E44F1A72CCC60003C41F /* MovieQuotesCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MovieQuotesCoreData.xcdatamodel; sourceTree = "<group>"; };
 		FD19E4561A72CCC60003C41F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FD19E4581A72CCC60003C41F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FD19E45B1A72CCC60003C41F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		FD19E4611A72CCC60003C41F /* MovieQuotesCoreDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieQuotesCoreDataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD19E4611A72CCC60003C41F /* MovieQuotesSwiftEndpointsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieQuotesSwiftEndpointsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD19E4661A72CCC60003C41F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD19E4671A72CCC60003C41F /* MovieQuotesCoreDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieQuotesCoreDataTests.swift; sourceTree = "<group>"; };
 		FD19E4731A72D71E0003C41F /* MovieQuotesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieQuotesTableViewController.swift; sourceTree = "<group>"; };
@@ -74,8 +74,8 @@
 		FD19E4481A72CCC60003C41F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FD19E4471A72CCC60003C41F /* MovieQuotesCoreData.app */,
-				FD19E4611A72CCC60003C41F /* MovieQuotesCoreDataTests.xctest */,
+				FD19E4471A72CCC60003C41F /* MovieQuotesSwiftEndpoints.app */,
+				FD19E4611A72CCC60003C41F /* MovieQuotesSwiftEndpointsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -124,9 +124,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FD19E4461A72CCC60003C41F /* MovieQuotesCoreData */ = {
+		FD19E4461A72CCC60003C41F /* MovieQuotesSwiftEndpoints */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FD19E46B1A72CCC60003C41F /* Build configuration list for PBXNativeTarget "MovieQuotesCoreData" */;
+			buildConfigurationList = FD19E46B1A72CCC60003C41F /* Build configuration list for PBXNativeTarget "MovieQuotesSwiftEndpoints" */;
 			buildPhases = (
 				FD19E4431A72CCC60003C41F /* Sources */,
 				FD19E4441A72CCC60003C41F /* Frameworks */,
@@ -136,14 +136,14 @@
 			);
 			dependencies = (
 			);
-			name = MovieQuotesCoreData;
+			name = MovieQuotesSwiftEndpoints;
 			productName = MovieQuotesCoreData;
-			productReference = FD19E4471A72CCC60003C41F /* MovieQuotesCoreData.app */;
+			productReference = FD19E4471A72CCC60003C41F /* MovieQuotesSwiftEndpoints.app */;
 			productType = "com.apple.product-type.application";
 		};
-		FD19E4601A72CCC60003C41F /* MovieQuotesCoreDataTests */ = {
+		FD19E4601A72CCC60003C41F /* MovieQuotesSwiftEndpointsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FD19E46E1A72CCC60003C41F /* Build configuration list for PBXNativeTarget "MovieQuotesCoreDataTests" */;
+			buildConfigurationList = FD19E46E1A72CCC60003C41F /* Build configuration list for PBXNativeTarget "MovieQuotesSwiftEndpointsTests" */;
 			buildPhases = (
 				FD19E45D1A72CCC60003C41F /* Sources */,
 				FD19E45E1A72CCC60003C41F /* Frameworks */,
@@ -154,9 +154,9 @@
 			dependencies = (
 				FD19E4631A72CCC60003C41F /* PBXTargetDependency */,
 			);
-			name = MovieQuotesCoreDataTests;
+			name = MovieQuotesSwiftEndpointsTests;
 			productName = MovieQuotesCoreDataTests;
-			productReference = FD19E4611A72CCC60003C41F /* MovieQuotesCoreDataTests.xctest */;
+			productReference = FD19E4611A72CCC60003C41F /* MovieQuotesSwiftEndpointsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -173,11 +173,10 @@
 					};
 					FD19E4601A72CCC60003C41F = {
 						CreatedOnToolsVersion = 6.1.1;
-						TestTargetID = FD19E4461A72CCC60003C41F;
 					};
 				};
 			};
-			buildConfigurationList = FD19E4421A72CCC60003C41F /* Build configuration list for PBXProject "MovieQuotesCoreData" */;
+			buildConfigurationList = FD19E4421A72CCC60003C41F /* Build configuration list for PBXProject "MovieQuotesSwiftEndpoints" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -190,8 +189,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FD19E4461A72CCC60003C41F /* MovieQuotesCoreData */,
-				FD19E4601A72CCC60003C41F /* MovieQuotesCoreDataTests */,
+				FD19E4461A72CCC60003C41F /* MovieQuotesSwiftEndpoints */,
+				FD19E4601A72CCC60003C41F /* MovieQuotesSwiftEndpointsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -242,7 +241,7 @@
 /* Begin PBXTargetDependency section */
 		FD19E4631A72CCC60003C41F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FD19E4461A72CCC60003C41F /* MovieQuotesCoreData */;
+			target = FD19E4461A72CCC60003C41F /* MovieQuotesSwiftEndpoints */;
 			targetProxy = FD19E4621A72CCC60003C41F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -350,7 +349,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MovieQuotesCoreData/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MovieQuotesSwiftEndpoints;
 			};
 			name = Debug;
 		};
@@ -360,14 +359,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MovieQuotesCoreData/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MovieQuotesSwiftEndpoints;
 			};
 			name = Release;
 		};
 		FD19E46F1A72CCC60003C41F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -378,30 +376,27 @@
 				);
 				INFOPLIST_FILE = MovieQuotesCoreDataTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MovieQuotesCoreData.app/MovieQuotesCoreData";
+				PRODUCT_NAME = MovieQuotesSwiftEndpointsTests;
 			};
 			name = Debug;
 		};
 		FD19E4701A72CCC60003C41F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = MovieQuotesCoreDataTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MovieQuotesCoreData.app/MovieQuotesCoreData";
+				PRODUCT_NAME = MovieQuotesSwiftEndpointsTests;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FD19E4421A72CCC60003C41F /* Build configuration list for PBXProject "MovieQuotesCoreData" */ = {
+		FD19E4421A72CCC60003C41F /* Build configuration list for PBXProject "MovieQuotesSwiftEndpoints" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FD19E4691A72CCC60003C41F /* Debug */,
@@ -410,7 +405,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FD19E46B1A72CCC60003C41F /* Build configuration list for PBXNativeTarget "MovieQuotesCoreData" */ = {
+		FD19E46B1A72CCC60003C41F /* Build configuration list for PBXNativeTarget "MovieQuotesSwiftEndpoints" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FD19E46C1A72CCC60003C41F /* Debug */,
@@ -419,7 +414,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FD19E46E1A72CCC60003C41F /* Build configuration list for PBXNativeTarget "MovieQuotesCoreDataTests" */ = {
+		FD19E46E1A72CCC60003C41F /* Build configuration list for PBXNativeTarget "MovieQuotesSwiftEndpointsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FD19E46F1A72CCC60003C41F /* Debug */,
